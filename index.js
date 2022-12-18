@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// Importing fs, inquirer, generateMarkdown file--and the functions within it.
 const fs = require('fs')
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js')
-// TODO: Create an array of questions for user input
+
+// Array of questions for the README, that user will answer to specify the info in their README file.
 const questions = [
         {
           type: 'input',
@@ -27,27 +28,40 @@ const questions = [
         {
           type: 'input',
           name: 'contributions',
-          message: 'Provide credit to any contributions'
+          message: 'Provide credit to any contributers'
+        },
+        {
+          type: 'list',
+          message: 'Which license would you like to select?',
+          name: 'license',
+          choices: ['Apache 2.0 License','Boost Software License 1.0','Eclipse Public License 1.0', 'IBM Public License Version 1.0', 'MIT', 'Mozilla Public License 2.0', 'No License applicable']
+        },
+        {
+          type: 'input',
+          name: 'username',
+          message: 'What is your github username?'
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email address?'
         },
     ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
+// Uses inquirer to prompt user for questions, then it returns the answers in data, and writes those answers to a README file.
 function init() {
     inquirer
         .prompt(questions)
 
-        .then((answers) => {
-            fs.writeFile("readMe.md", generateMarkdown(answers), (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
+        .then((data) => {
+            fs.writeFile("readMe.md", generateMarkdown(data), (err) =>
+      err ? console.log(err) : console.log('README created!'));
         })
 }
 
-
-// Function call to initialize app
 init();
 
 // inquirer
