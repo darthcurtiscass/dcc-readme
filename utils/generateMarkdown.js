@@ -48,28 +48,25 @@ function renderLicenseLink(license) {
     return ''
 }}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== 'No License applicable') {
-    return renderLicenseSection(data.license)
-  } else {
-    return '';
-  }
-}
-
 // TODO: Create a function to generate markdown for README
 function makeMarkdown(data) {
+  console.log(data)
   return `# ${data.title}\n
+## Table of Contents: 
+[Description](#description)\n
+[Installation](#installation)\n
+[Usage](#usage)\n
+[Contributions](#contributions)\n
+[License](#license)\n
+[Questions](#questions)\n
 ## Description: \n${data.description}\n
 ## Installation: \n${data.installation}\n
 ## Usage: \n${data.usage}\n
 ## Contributions: \n${data.contributions}\n
 ## License: \n${renderLicenseBadge(data.license)}\n
 ${renderLicenseLink(data.license)}\n
-## Questions: \nGithub Username: ${data.username}\n\nEmail: ${data.email}\n`;
+## Questions: \nGithub Username: https://github.com/${data.username}\n
+\nEmail: ${data.email}\n`;
 }
 
-
-
-module.exports = makeMarkdown, renderLicenseBadge, renderLicenseSection;
+module.exports = makeMarkdown;
