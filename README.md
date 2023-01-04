@@ -1,4 +1,7 @@
-# Team Maker
+# Read Me Generator
+ 
+ ## Demonstration Video
+ https://drive.google.com/file/d/1z_-9R1VtaXr9SZe7V2YxFdtQDHRsiBY6/view
 
 ## Table of Contents: 
 [Description](#description)
@@ -14,24 +17,24 @@
 [Questions](#questions)
 
 ## Description: 
-Application that consists of question arrays which prompt the user for data specific to the employee type that thry select. The data is interpreted and compiled into a minimally stylized, but easy to read webpage.
+An application using prompts in the command line to gather data to create a readme file.
 
 ## Installation: 
-NA
+There are none.
 
 ## Usage: 
-This application can be used to create a webpage that displays information about a team of employees with options for three job titles: Manager, Engineer, and Intern. 
+This app can be used to create a professional README file.
 
 ## Contributions: 
-Joem Cassusi, Tom Ford, Julio Valdez
+Tom Ford
 
 ## License: 
+Mozilla Public License 2.0[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
-
-
+(https://opensource.org/licenses/MPL-2.0)
 
 ## Questions: 
 Github Username: https://github.com/darthcurtiscass
 
 
-Email: dylancurtiscassagnol@icloud.com
+Email: dylan@apple.com
